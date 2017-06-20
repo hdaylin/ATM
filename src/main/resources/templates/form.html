@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{/index}" th:object="${person}" method = "post">
+    <div class="form-group">
+        <label for="id"> Person Id: </label>
+        <input type="number" th: field="*{pid}" class="form-control" id="id" placeholder="Id"/>
+    </div>
+
+    <div class="form-group">
+        <label for="fname"> First Name: </label>
+        <input type="text" th: field="*{fname}" class="form-control" id="fname" placeholder="First Name"/>
+    </div>
+    <div class="form-group">
+        <label for="lname">Last Name:</label>
+        <input type="text" th: field="*{lname}" class="form-control" id="lname" placeholder="Last Name"/>
+    </div>
+
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</body>
+</html>
